@@ -1,0 +1,22 @@
+name: iuh_fit_coffee_house_mysql
+
+services:
+  mysql-global:
+    image: mysql:8.3
+    container_name: iuh_fit_coffee_house_mysql
+    restart: always
+
+    ports:
+      - '3306:3306'
+
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    volumes:
+      - ../../../local/mysql:/var/lib/mysql
