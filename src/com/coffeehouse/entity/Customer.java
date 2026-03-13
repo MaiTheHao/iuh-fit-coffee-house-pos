@@ -15,5 +15,5 @@ import lombok.experimental.SuperBuilder;
 @ToString(callSuper = true)
 public class Customer extends SynableEntity {
     private String phone;
-    private int points;
+    private Integer points;
 }

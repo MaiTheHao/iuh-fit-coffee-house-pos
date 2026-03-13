@@ -78,7 +78,7 @@ public class CustomerDao extends BaseDao<Customer> {
         .id(incoming.getId())
         .code(incoming.getCode() != null ? incoming.getCode() : saved.getCode())
         .phone(incoming.getPhone() != null ? incoming.getPhone() : saved.getPhone())
-        .points(incoming.getPoints() > 0 ? incoming.getPoints() : saved.getPoints())
+        .points(incoming.getPoints() != null ? incoming.getPoints() : saved.getPoints())
         .isActive(incoming.getIsActive() != null ? incoming.getIsActive() : saved.getIsActive())
         .synced(incoming.isSynced())
         .build();

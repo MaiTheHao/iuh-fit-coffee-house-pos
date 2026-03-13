@@ -15,7 +15,7 @@ import lombok.experimental.SuperBuilder;
 @ToString(callSuper = true)
 public class InvoiceItem extends BaseEntity {
     private Double unitPrice;
-    private int quantity;
+    private Integer quantity;
     private Double subtotal;
     private String note;
     private Long invoiceId;

@@ -87,7 +87,7 @@ public class InvoiceItemDao extends BaseDao<InvoiceItem> {
         .id(incoming.getId())
         .code(incoming.getCode() != null ? incoming.getCode() : saved.getCode())
         .unitPrice(incoming.getUnitPrice() != null ? incoming.getUnitPrice() : saved.getUnitPrice())
-        .quantity(incoming.getQuantity() > 0 ? incoming.getQuantity() : saved.getQuantity())
+        .quantity(incoming.getQuantity() != null ? incoming.getQuantity() : saved.getQuantity())
         .subtotal(incoming.getSubtotal() != null ? incoming.getSubtotal() : saved.getSubtotal())
         .note(incoming.getNote() != null ? incoming.getNote() : saved.getNote())
         .isActive(incoming.getIsActive() != null ? incoming.getIsActive() : saved.getIsActive())
